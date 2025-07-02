@@ -1,0 +1,441 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #1e3c72 0%, #4a90e2 100%);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(30,60,114,0.3);
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(30,60,114,0.9) 0%, rgba(74,144,226,0.9) 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #ffffff, #e3f2fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-weight: 300;
+}
+
+/* Subjects Grid */
+.subjects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subject-btn {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 1.2rem 1rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    backdrop-filter: blur(10px);
+    display: block;
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.subject-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-color: rgba(74,144,226,0.5);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(227,242,253,0.95) 100%);
+}
+
+.subject-btn span {
+    display: block;
+    line-height: 1.4;
+}
+
+/* Terms Section */
+.terms {
+    padding: 4rem 0;
+    margin-top: 2rem;
+}
+
+.terms-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.terms-card h2 {
+    background: linear-gradient(135deg, #1e3c72 0%, #4a90e2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.term-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(74,144,226,0.1) 0%, rgba(30,60,114,0.1) 100%);
+    border-radius: 15px;
+    border-left: 5px solid #4a90e2;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.term-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.term-item:last-child {
+    margin-bottom: 0;
+}
+
+.term-item p {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.term-item p:last-child {
+    margin-bottom: 0;
+}
+
+.term-item a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.term-item a:hover {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e3c72 0%, #4a90e2 100%);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30,60,114,0.4);
+    border: 2px solid transparent;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30,60,114,0.6);
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Year Selection */
+.year-selection {
+    padding: 3rem 0;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    min-height: 70vh;
+    border-radius: 30px 30px 0 0;
+}
+
+.year-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.year-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #2c3e50;
+    padding: 1.2rem 1rem;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    display: block;
+    border: 2px solid rgba(74,144,226,0.2);
+    backdrop-filter: blur(10px);
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.year-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border-color: rgba(74,144,226,0.5);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(227,242,253,0.95) 100%);
+}
+
+.year-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #1e3c72 0%, #4a90e2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.year-card p {
+    opacity: 0.85;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, rgba(30,60,114,0.95) 0%, rgba(44,62,80,0.95) 100%);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer p {
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .subjects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        max-width: 340px;
+    }
+    
+    .subject-btn {
+        padding: 1rem 0.8rem;
+        font-size: 0.9rem;
+        border-radius: 12px;
+        width: 150px;
+    }
+    
+    .terms-card {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+    
+    .logo {
+        height: 60px;
+    }
+    
+    .year-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        max-width: 340px;
+    }
+    
+    .year-card {
+        padding: 1rem 0.8rem;
+        border-radius: 12px;
+        width: 150px;
+    }
+    
+    .year-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    .year-card p {
+        font-size: 1rem;
+    }
+    
+    .year-selection {
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .subject-btn {
+        padding: 0.9rem 0.7rem;
+        font-size: 0.85rem;
+        width: 140px;
+    }
+    
+    .terms-card {
+        padding: 1.5rem;
+    }
+    
+    .term-item {
+        padding: 1.2rem;
+    }
+    
+    .year-card {
+        padding: 0.9rem 0.7rem;
+        width: 140px;
+    }
+    
+    .year-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .year-card p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero, .subjects-grid, .terms-card, .year-grid {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Keyboard navigation focus styles */
+.keyboard-nav .subject-btn:focus,
+.keyboard-nav .year-card:focus,
+.keyboard-nav .back-btn:focus {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(74,144,226,0.6);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(74,144,226,0.8);
+} 
