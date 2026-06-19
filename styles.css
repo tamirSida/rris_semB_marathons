@@ -93,7 +93,7 @@ body {
     justify-content: center;
     gap: 1.5rem;
     margin-top: 3rem;
-    max-width: 1000px;
+    max-width: 1060px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -301,6 +301,17 @@ body {
 .footer p {
     opacity: 0.9;
     font-weight: 300;
+}
+
+/* Medium screens: keep 4-item grids as a balanced 2x2 instead of an orphaned "3 + 1" */
+@media (max-width: 1100px) {
+    .subjects-grid {
+        max-width: 520px;
+    }
+
+    .year-grid {
+        max-width: 520px;
+    }
 }
 
 /* Responsive Design */
